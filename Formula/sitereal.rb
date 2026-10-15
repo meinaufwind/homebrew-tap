@@ -2,35 +2,35 @@
 class Sitereal < Formula
   desc "Visual builder for Astro — writes real .astro files into your project"
   homepage "https://sitereal.app"
-  version "0.3.1"
+  version "0.4.0"
   license :cannot_represent
 
   on_macos do
     on_arm do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-darwin-arm64.tar.gz"
-      sha256 "b6236e11013b8bfc188578ccd8aa14dbdddf90a298ce86172ed7fa72cf3a281a"
+      sha256 "d2ac68bf87a985a92de839b28ea9821ad64cae0720c92a802b15c58f387d20cf"
     end
     on_intel do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-darwin-x64.tar.gz"
-      sha256 "f5517fbdb6e9e7912fbf3cff4590db96f32481242ce8bd05f8fdc4370e35bbb5"
+      sha256 "6e191748c6f1ab4c94223e9dfe3b39bdaceb10495ece0906df1598964f101c72"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-linux-x64.tar.gz"
-      sha256 "754e278a5c9c1795154ba74d16bb49c2d18ea1e060f0d97df5bcd0db6c22ce23"
+      sha256 "0bede8627680aa79b436e989df7ac801344a795111ccc00c19b09315e221e1b4"
     end
     on_arm do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-linux-arm64.tar.gz"
-      sha256 "eadb887ad2ef7711198e83a2bc182c207b054c438dbb164b080bd5b31a8f816a"
+      sha256 "07df71634a544c78ac1b5a1738742787b7366af533b6c2ac8fb9be06ff10ff1d"
     end
   end
 
   def install
     # The binary finds the UI relative to itself — libexec keeps the pair
     # together and `bin.install_symlink` puts only the command on PATH.
-    libexec.install "bin/sitereal", "ui"
+    libexec.install "bin/sitereal", "bin/astro-parser.wasm", "ui"
     bin.install_symlink libexec/"sitereal"
   end
 
