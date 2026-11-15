@@ -2,28 +2,28 @@
 class Sitereal < Formula
   desc "Visual builder for Astro — writes real .astro files into your project"
   homepage "https://sitereal.app"
-  version "1.1.0"
+  version "1.1.1"
   license :cannot_represent
 
   on_macos do
     on_arm do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-darwin-arm64.tar.gz"
-      sha256 "036724f4e198dacab05f8d2852efb6c261d2c2c63e7fc9282612f7ad7b52074d"
+      sha256 "e0da2324dd0650918ec2c0d32df8b657755074058753836b9a508af72d8b61c3"
     end
     on_intel do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-darwin-x64.tar.gz"
-      sha256 "0aaf1e1c7f4bc625c547ef925c60a726728abc5fbde94f18e8be693d0d26e5e5"
+      sha256 "85239aebbcb72ae8324bf992ce298e9582048cc081b7d34dd6b30728afefd512"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-linux-x64.tar.gz"
-      sha256 "4d703960a16a4e25937bf157805e303268fd139f8c307fb0ae4a1d4e2545802c"
+      sha256 "967a56e2c21c6d3c463c59337c703102dd8f1e3eed2ba5e344a10c84149bd08b"
     end
     on_arm do
       url "https://github.com/meinaufwind/sitereal-releases/releases/download/v#{version}/sitereal-linux-arm64.tar.gz"
-      sha256 "f8b36a3ec1fa51ade1c7c8aa84fe15deebe1fdf1f5e2ad2e99f2dc9aa21ebc9b"
+      sha256 "7dc54e9335532291e45e453c28cc56719d8195041047b592412aba11aeca0923"
     end
   end
 
